@@ -9,7 +9,6 @@ export const Navbar = () => {
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-
     const showButton = () => {
         if (window.innerWidth <= (960)) {
             setButton(false);
@@ -77,7 +76,15 @@ export const Navbar = () => {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle="btn__outline">SIGN UP</Button>}
+                    {
+                        button && 
+                        <Button 
+                            buttonStyle="btn__outline"
+                            buttonSize="btn__large"
+                        >
+                            SIGN UP
+                        </Button>
+                    }
                 </section>
             </nav>
             <Outlet />

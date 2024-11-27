@@ -9,7 +9,7 @@ type BUT = {
     type?: "submit" | "reset" | "button",
     onClick?: React.MouseEventHandler<HTMLButtonElement>,
     buttonStyle: string,
-    buttonSize?: string
+    buttonSize: string
 };
 
 export const Button = ({  
@@ -20,7 +20,7 @@ export const Button = ({
         ? buttonStyle
         : STYLES[0];
     
-    const checkButtonSize = SIZES.includes(buttonSize!)
+    const checkButtonSize = SIZES.includes(buttonSize)
         ? buttonSize
         : SIZES[0];
     
@@ -30,7 +30,9 @@ export const Button = ({
             to={"/signup"}
         >
             <button
-                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                className={`btn 
+                        ${checkButtonStyle} 
+                        ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
             >

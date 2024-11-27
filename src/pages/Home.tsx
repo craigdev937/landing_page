@@ -1,10 +1,10 @@
 import React from "react";
+import { Hero } from "../components/hero/Hero";
 
 export const Home = () => {
     return (
         <React.Fragment>
-            <h1>Home Page</h1>
-            <h1>Hero Section</h1>
+            <Hero />
             <h1>Cards</h1>
             <h1>Footer</h1>
         </React.Fragment>
